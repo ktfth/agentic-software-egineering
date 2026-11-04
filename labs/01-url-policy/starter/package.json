@@ -1,0 +1,6 @@
+{
+  "name": "@ase/lab01-starter",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module"
+}
