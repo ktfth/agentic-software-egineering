@@ -1,5 +1,5 @@
 import { realpathSync, readFileSync } from 'node:fs';
-import { resolve, relative, isAbsolute } from 'node:path';
+import { resolve, relative, isAbsolute, sep } from 'node:path';
 import { DatabaseSync } from 'node:sqlite';
 import { validateMonitorUrl } from '../../url-policy/src/index.js';
 export interface MonitorSpec { name: string; url: string; intervalSeconds: number }
@@ -38,7 +38,7 @@ export function readEvidence(root: string, candidate: string): string {
   const realRoot = realpathSync(root);
   const realFile = realpathSync(resolve(realRoot, candidate));
   const local = relative(realRoot, realFile);
-  if (local === '..' || local.startsWith('..' + (process.platform === 'win32' ? '\\' : '/')) || isAbsolute(local)) throw new Error('Path outside root');
+  if (local === '..' || local.startsWith('..' + sep) || isAbsolute(local)) throw new Error('Path outside root');
   const text = readFileSync(realFile, 'utf8');
   if (text.length > 4000) throw new Error('Evidence too large');
   return text;
