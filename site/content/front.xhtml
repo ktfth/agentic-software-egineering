@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="pt-BR" lang="pt-BR"><head><title>Abertura e guia de leitura</title><link rel="stylesheet" type="text/css" href="styles.css"/></head><body><h1>Engenharia de Software com Agentes de IA</h1>
+<h2>Evidência, ferramentas e autonomia sob controle</h2>
+<p>Kaique Silva</p>
+<p>Primeira edição em português - 2026</p>
+<h1>Nota desta edição</h1>
+<p>Este livro parte de uma posição prática: código executável é a principal evidência de uma alegação funcional. Seus doze capítulos e oito laboratórios discutem como transformar propostas de agentes em mudanças que podem ser verificadas, revisadas e recuperadas.</p>
+<p>O código complementar é público e não depende dos arquivos editoriais. O código-fonte do site fica no mesmo repositório, na pasta site/, com esta abertura, o capítulo 1 e guias de leitura das demais seções; o texto completo está nas edições Kindle e impressa. O projeto Sentinel desta edição é uma aplicação local mínima, acompanhada de exercícios independentes. Não é um serviço completo de monitoramento e não integra um provedor comercial de modelos. Os agentes dos testes são simuladores determinísticos usados para verificar o executor.</p>
+<p>O texto e as ilustrações foram produzidos com ferramentas de inteligência artificial nesta preparação editorial. A execução dos exemplos técnicos foi verificada. Não foi realizada uma avaliação de desempenho de modelos ou uma revisão técnica humana independente.</p>
+<p>As referências de bibliotecas e regras de publicação foram consultadas em 4 de novembro de 2026. Produtos, políticas e APIs podem mudar. A versão do código vinculada a esta edição é o commit be005f2f334740f02d0c647361f0698f2edeed11 do repositório. Consulte essa revisão quando precisar comparar o programa com a explicação.</p>
+<p>Marcas e nomes de produtos pertencem a seus respectivos titulares. Não há vínculo de patrocínio, certificação ou aprovação por parte de Amazon, OpenAI, Node.js ou outras organizações mencionadas. Os nomes aparecem para identificar ferramentas e fontes técnicas.</p>
+<h1>Para quem este livro foi escrito</h1>
+<p>O leitor esperado já consegue navegar em um projeto JavaScript ou TypeScript, executar comandos de terminal e reconhecer testes básicos. Não é necessário conhecer internamente modelos de linguagem, possuir uma assinatura de API ou instalar um banco externo.</p>
+<p>Se você está começando em programação, execute primeiro a aplicação mínima e procure compreender a passagem entre argumentos da CLI, política de URL e banco. Se já trabalha com engenharia, use os laboratórios para investigar fronteiras que normalmente ficam implícitas: proveniência de evidência, recuperação depois de erro e limite real de uma ferramenta.</p>
+<p>O livro não promete eliminar revisão humana ou produzir sistemas de produção a partir de um prompt. Sua proposta é construir uma base de julgamento para delegar melhor. Você aprenderá a fazer perguntas mais precisas, selecionar observações relevantes e reconhecer quando um resultado ainda não autoriza a conclusão desejada.</p>
+<h1>Como estudar</h1>
+<p>Leia os capítulos em sequência na primeira passagem. Eles percorrem evidência, ambiente, especificação, execução, ferramentas, dados, testes, avaliação, revisão e operação. A seção de laboratórios reúne as atividades para facilitar a consulta durante o trabalho no terminal.</p>
+<p>Antes de abrir uma solução, execute o starter e tente prever a falha. Depois implemente a regra e execute novamente. Quando o resultado ficar verde, registre também uma propriedade que você ainda não demonstrou. Esse hábito impede que a conclusão cresça mais que a evidência.</p>
+<p>Não há cronograma obrigatório ou promessa de duração. Um laboratório curto pode exigir reflexão longa se você testar as limitações em vez de apenas copiar a referência. Use as extensões propostas para aprofundar, mantendo em separado a solução executada e as hipóteses que ainda precisam de trabalho.</p>
+<h1>O código complementar</h1>
+<p>Repositório: <a href="https://github.com/ktfth/agentic-software-egineering">https://github.com/ktfth/agentic-software-egineering</a></p>
+<p>O nome do repositório contém a grafia egineering. Preserve esse endereço exatamente ao acessá-lo. Use o botão Code do GitHub para obter os arquivos e abra o terminal na pasta que contém package.json. O código não depende dos arquivos editoriais.</p>
+<p>Pré-requisitos de referência: Node.js 24.22.1 e npm 11.9.0. A instalação inicial precisa de acesso ao registry npm. Depois disso, os exemplos e os testes executam localmente.</p>
+<pre><code class="language-sh">npm ci
+npm run validate
+npm run sentinel -- add Example https://example.com
+npm run sentinel -- list
+</code></pre>
+<p>A CLI cria sentinel.sqlite na pasta atual. A variável SENTINEL_DB permite selecionar outro arquivo. Nos testes, recursos isolados impedem dependência desse banco de demonstração. Os diretórios temporários de exercício pertencem ao workspace do projeto.</p>
+<p>O script verify:labs percorre os oito starters em estado incompleto, aplica a referência de cada um, verifica a aprovação e restaura o starter. Use-o em uma cópia sem alterações pessoais nos arquivos de exercício e mantenha backup do seu trabalho. Ele é uma ferramenta de verificação da distribuição, não uma medida da aprendizagem.</p>
+<h1>Convenções</h1>
+<p>Identificadores técnicos e código permanecem em inglês. O texto editorial está em português. Uma função apresentada como referência pertence ao repositório e foi exercitada pelos contratos descritos. Propostas de evolução aparecem explicitamente como desenho ou extensão, sem alegação de execução.</p>
+<p>Os diagramas são explicações estruturais; as gravuras são metáforas visuais. Nenhuma gravura pretende mostrar uma topologia de segurança ou uma arquitetura executável. Tabelas de decisão e métricas sintéticas são exemplos didáticos e não resultados de um modelo avaliado.</p>
+</body></html>
