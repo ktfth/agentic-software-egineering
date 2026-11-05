@@ -1,0 +1,8 @@
+node_modules
+dist
+artifacts
+*.sqlite*
+site/dist
+site/assets-originais
+.env*
+.vercel
